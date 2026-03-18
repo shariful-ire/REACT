@@ -1,23 +1,28 @@
-
+import { useState } from 'react'
 import './App.css'
-import Contact from './Component/Contact'
-import Header from './Component/Header'
-import Hero from './Component/Hero'
-// import Footer from './Component/Footer'
-
-
 
 function App() {
-  
-  return (
-   <div>
-    <Header></Header>
-    <Hero></Hero>
-    <Contact></Contact>
-    {/* <Footer></Footer> */}
 
-   </div>
+  const [list, setList] = useState([])
+  const [item, setItem] = useState("")
+
+  const addToList = () => {
+    setList([...list, item])
+  }
+
+  return (
+    <div>
+      <p>{item}</p>
+
+      <input
+        type="text"
+        onChange={(e) => setItem(e.target.value)}
+        placeholder="Item"
+      />
+
+      <button onClick={addToList}>Add</button>
+    </div>
   )
 }
 
-export default App;
+export default App
