@@ -9,7 +9,7 @@ class Hero extends Component {
                     background:'green',
                     border: '10px solid wiite'
                 
-                }}>HERO</h1>
+                }}>HERO Content You can enjoy with us </h1>
                 <button onClick={()=>alert("Hellow")}>Click Me</button>
             </div>
         );
